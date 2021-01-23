@@ -5,8 +5,10 @@
 
 matrix::matrix(int row, int col)
 {
-  int mat_size = row*col;
-  int shape[2] =  {row, col};
+  mat_size = row*col;
+  shape = new int[2];
+  shape[0] = row;
+  shape[1] = col;
   data = new double[mat_size];
 }
 
@@ -43,15 +45,15 @@ matrix::print(void)
 double 
 matrix::operator()(int row, int col) const
 {
-  int loc = row*col - 1;
-  // int loc = row*shape[0] + col -1;
+  // int loc = row*col - 1;
+  int loc = row*shape[0] + col -1;
   return data[loc];
 }
 
 double &
 matrix::operator()(int row, int col)
 {
-  int loc = row*col - 1;
-  // int loc = row*shape[0] + col -1;
+  // int loc = row*col - 1;
+  int loc = row*shape[0] + col -1;
   return data[loc];
 }

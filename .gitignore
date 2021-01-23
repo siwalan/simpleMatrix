@@ -1,0 +1,8 @@
+a.out
+.vscode/launch.json
+.vscode/tasks.json
+main.dSYM/Contents/Info.plist
+main.dSYM/Contents/Resources/DWARF/main
+matrix.dSYM/Contents/Info.plist
+matrix.dSYM/Contents/Resources/DWARF/matrix
+matrix
